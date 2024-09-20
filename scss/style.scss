@@ -1670,6 +1670,44 @@ textarea.form-control {
 		width: 100%;
 	}
 }
+.memories-section {
+	.contact-info{
+		p{
+			a{
+				color: lighten($black,10%);
+			}
+			span{}
+		}
+	}
+	.box{
+		width: 100%;
+		display: block;
+		@include border-radius(4px);
+		@include media-breakpoint-down(md){
+			margin-bottom: 30px;
+		}
+		.icon{
+			width: 100px;
+			height: 100px;
+			background: rgba(255,255,255,.1);
+			margin: 0 auto;
+			margin-bottom: 2em;
+			@include border-radius(50%);
+			span{
+				color: $primary;
+				font-size: 30px;
+			}
+		}
+		h3{
+			font-size: 17px;
+			font-weight: 500;
+			text-transform: uppercase;
+		}
+	}
+	.contact-form{
+		width: 100%;
+	}
+}
 .contact-section {
 	.img{
 		width: 100%;
@@ -1986,3 +2024,31 @@ textarea.form-control {
     stroke-dashoffset: -136px;
   }
 }
+.frame {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 320px;
+	height: 800px;
+	border: 1px solid #ccc;
+  }
+  
+  .row {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+  }
+  
+  .column {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-right: 20px;
+  }
+  
+  .frame canvas {
+	width: 160px;
+	height: 160px;
+	margin-bottom: 20px;
+	border: 1px solid #ccc;
+  }
