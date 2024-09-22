@@ -27,7 +27,6 @@
 
 
 	<style>
-		
 		.about-mf .box-shadow-full {
 			padding-top: 4rem;
 			padding-bottom: 4rem;
@@ -106,6 +105,91 @@
 		.zoom-effect:hover {
 			transform: scale(1.1);
 		}
+
+		#memories-section {
+			background-color: #f7f7f7;
+			padding: 50px 0;
+		}
+
+		.memories-wrap {
+			position: relative;
+			perspective: 1000px;
+			/* Adjust for desired 3D effect */
+		}
+
+		.memory-item {
+			position: relative;
+			display: inline-block;
+			margin: 10px 5px;
+			/* Add horizontal margin of 5px for spacing */
+			width: 200px;
+			/* Set a fixed width for the cube */
+			height: 200px;
+			/* Set a fixed height for the cube */
+			cursor: pointer;
+			transform-style: preserve-3d;
+			transition: transform 0.5s;
+		}
+
+		.memory-item:hover {
+			transform: rotateY(180deg);
+		}
+
+		/* Front and back faces of the cube (image and overlay) */
+		.memory-item img,
+		.memory-overlay {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			backface-visibility: hidden;
+		}
+
+		.memory-item img {
+			object-fit: cover;
+			border-radius: 10px;
+			/* margin-left:"3px"; */
+		}
+
+		.memory-overlay {
+			top: 0;
+			left: 0;
+			background-color: rgba(0, 0, 0, 0.5);
+			color: #fff;
+			padding: 20px;
+			transform: rotateY(180deg);
+			display: flex;
+			flex-direction: column;
+			/* Align content vertically */
+			justify-content: center;
+			/* Center content vertically */
+			align-items: center;
+			/* Center content horizontally */
+			border-radius: 10px;
+			/* Add rounded corners */
+		}
+
+		.memory-overlay h3 {
+			font-size: 18px;
+			margin-bottom: 10px;
+			text-align: center;
+			/* Center text */
+		}
+
+		.memory-overlay p {
+			font-size: 14px;
+			text-align: center;
+			/* Center text */
+		}
+
+		.big {
+			text-align: center;
+			color: black;
+			margin-left: 0%;
+			font-family: "Deep hero";
+			font-size: 50px;
+
+
+		}
 	</style>
 
 
@@ -128,7 +212,7 @@
 					<li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
 					<li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
 					<li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
-					<li class="nav-item"><a href="#memories-section" class="nav-link"><span>College memories</span></a></li>
+					<li class="nav-item"><a href="#memories-section" class="nav-link"><span>Memories</span></a></li>
 					<li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
 				</ul>
 			</div>
@@ -324,12 +408,9 @@
 		</div>
 	</section>
 	<!-- Memories of Friends and Collage Page -->
-	<!-- Memories of Friends and Collage Page -->
-<!--  -->
 
 
-
-<!-- juhfdgh iho nthoih [ri0hj 34gfj okfvji0[hjg knefoi hje ih0i 9-]] -->
+	<!-- juhfdgh iho nthoih [ri0hj 34gfj okfvji0[hjg knefoi hje ih0i 9-]] -->
 
 
 	<section class="ftco-section ftco-no-pb" id="resume-section">
@@ -407,7 +488,8 @@
 
 	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
 
-		<div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+		<div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)"
+			height="20%">
 			<!-- <div class="container"> -->
 			<div class="row justify-content-center">
 				<div class="col-md-7 ftco-animate text-center">
@@ -423,6 +505,82 @@
 			<!-- </div> -->
 		</div>
 	</section>
+	<!-- Memories of Friends and Collage Page -->
+	<!--  -->
+	<section class="ftco-section ftco-no-pt ftco-no-pb" id="memories-section">
+		<div class="container">
+			<h1 class="big">Memories</h1>
+			<p style="text-align: center;padding-left: 30px;">
+				We don't remember the days, we remember the moments.
+
+
+			</p>
+		</div>
+		<div class="row">
+			<div class="col-md-2">
+				<div class="memory-item">
+					<img src="pic (2).png" alt="Memory 1" class="img-fluid">
+					<div class="memory-overlay">
+						<h3>Memory 1</h3>
+						<p>I remember this from my last collage, Fresher.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="memory-item">
+					<img src="pic (3).jpg" alt="Memory 2" class="img-fluid">
+					<div class="memory-overlay">
+						<h3>Memory 2</h3>
+						<p>Here's another recollection from the conclusion of my first semester.
+							.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="memory-item">
+					<img src="pic (1).jpg" alt="Memory 3" class="img-fluid">
+					<div class="memory-overlay">
+						<h3>Memory 3</h3>
+						<p>Another recollection from my collage friends is this one.
+
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="memory-item">
+					<img src="pic (4).jpg" alt="Memory 4" class="img-fluid">
+					<div class="memory-overlay">
+						<h3>Memory 4</h3>
+						<p>This is yet another memory from my past.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="memory-item">
+					<img src="pic (1).png" alt="Memory 5" class="img-fluid">
+					<div class="memory-overlay">
+						<h3>Memory 5</h3>
+						<p>Another recollection from my collage friends is this one.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="memory-item">
+					<img src="pic (2).jpg" alt="Memory 6" class="img-fluid">
+					<div class="memory-overlay">
+						<h3>Memory 6</h3>
+						<p>Another recollection from my collage friends is this one.
+						</p>
+					</div>
+				</div>
+			</div>
+			<!-- Add more pictures here -->
+		</div>
+		</div>
+	</section>
+
 
 
 
